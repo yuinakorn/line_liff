@@ -69,7 +69,7 @@
 
     async function sendMsg() {
       const profile = await liff.getProfile()
-      alert("Before Message send")
+      alert("สวัสดีคุณ " + profile.displayName + " นี่คือระบบจองคิวโรงพยาบาล!")
       if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
         await liff.sendMessages([
           {
