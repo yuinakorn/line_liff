@@ -78,6 +78,7 @@
       document.getElementById("userId").append(profile.userId)
       document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)
+      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
 
     function getEnvironment() {
@@ -88,7 +89,7 @@
       document.getElementById("isInClient").append(liff.isInClient())
       if (liff.isInClient()) {
         document.getElementById("btnLogOut").style.display = "none"
-      }else {
+      } else {
         document.getElementById("btnMsg").style.display = "none"
         document.getElementById("btnScanCode").style.display = "none"
         document.getElementById("btnClose").style.display = "none"
