@@ -66,12 +66,12 @@
     }
 
     async function sendMsg() {
+      const profile = await liff.getProfile()
       if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
         await liff.sendMessages([
           {
-            "type": "sticker",
-            "stickerId": "1",
-            "packageId": "1"
+            "type": "text",
+            "text": `สวัสดี ${profile.displayName} นี่คือระบบจองคิวโรงพยาบาล!`
           }
         ])
         alert("Message sent")
