@@ -66,6 +66,7 @@
     }
 
     async function sendMsg() {
+      alert("Before Message send")
       const profile = await liff.getProfile()
       if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
         await liff.sendMessages([
