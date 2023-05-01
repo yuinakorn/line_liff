@@ -68,9 +68,11 @@
     }
 
     async function sendMsg() {
+      await liff.init({ liffId: "1657818391-ogb5EzrD" })
       const profile = await liff.getProfile()
-      alert("สวัสดีคุณ " + profile.displayName + " นี่คือระบบจองคิวโรงพยาบาล!")
+      alert(":-D สวัสดีคุณ " + profile.displayName + " นี่คือระบบจองคิวโรงพยาบาล! liff.init")
       if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
+        alert(liff.getContext().type)
         await liff.sendMessages([
           {
             "type": "text",
